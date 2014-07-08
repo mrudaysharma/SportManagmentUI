@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<link href="css/Style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="script/test.js"></script>
+<script type="text/javascript">
+function activate()
+{
+	document.getElementById('TeamText').disabled=false;
+}
+function storedata()
+{
+	 // Check for LocalStorage support.
+	  if (localStorage) {
+
+	    // Add an event listener for form submissions
+	    document.getElementById('sportForm').addEventListener('submit', function() {
+	      // Get the value of the name field.
+	      var name = document.getElementById('userID').value;
+
+	      // Save the name in localStorage.
+	      localStorage.setItem('UserID', name);
+	    });
+
+	  }
+}
+
+</script>
+
+</head>
+
+<body onload="initialize()">
+
+	<div class="mainBody" id="mainBody">
+		<header class="signupHeader" id="signupHeader">Sign Up </header>
+		<form id="sportForm" action="Teaminfo.jsp" method="Get" onsubmit="storedata()">
+			<pre>
+				<div id="map_canvas"></div>
+			</pre>
+			<table width="60%" border="0" align="center" cellpadding="10">
+				<tr>
+					<td><div class="Country" id="Country">Country</div></td>
+					<td>
+						<div class="Countrydiv" id="Countrydiv">
+							<input type="text" name="CountryText" value="Country" size="20" />
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><div class="State" id="State">State</div></td>
+					<td><div class="statediv" id="statediv">
+							<input type="text" name="StateText" value="State" size="20" />
+						</div></td>
+				</tr>
+
+
+				<tr>
+					<td>
+						<div class="uidLable" id="uidLable">User ID</div>
+					</td>
+					<td><div class="userIDdiv" id="userIDdiv">
+							<input type="text" name="userID" value="User ID" size="20" />
+						</div></td>
+				</tr>
+
+				<tr>
+					<td><div class="Sports" id="Sports">Sport</div></td>
+					<td><div class="sportsDiv" id="sportsDiv">
+							<input type="text" name="SportText" value="Sport" size="20" />
+						</div></td>
+				</tr>
+				<tr>
+					<td><div class="League" id="League">League</div></td>
+					<td><div class="LeagueDiv" id="LeagueDiv">
+							<input type="text" name="Leaguetext" value="Leaguetext" size="20" />
+						</div></td>
+				</tr>
+
+				<tr>
+					<td><div class="Team" id="Team">Team</div></td>
+					<td><div class="TeamDiv" id="TeamDiv">
+							<select id="TeamText" name="Teams" form="sportForm"></select>
+						</div></td><td><a href=# onclick="activate();">Change</a>
+						</td>
+				</tr>
+
+			</table>
+			<div id="txtCDInfo"></div>
+			<div class="Submit" id="Submit">
+				<input type="submit">
+			</div>
+
+		</form>
+
+
+
+	</div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@charset "utf-8";
+#mainBody {
+	height: auto;
+	width: auto;
+	background-color: #C2C2C2;
+}
+
+body {
+	margin-left: 20%;
+	margin-top: 10%;
+	margin-right: 20%;
+	margin-bottom: 10%;
+}
+#signupHeader {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #000000;
+	text-shadow: 0px 0px #FFFFFF;
+	color: #FFFFFF;
+	text-align: center;
+	font-size: xx-large;
+	font-style: inherit;
+}
+
+#uidLable {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size: large;
+	display: inline-table;
+
+}
+#uidText {
+	display: inline-table;
+
+}
+#Country {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-style: italic;
+	font-size: large;
+	display: inline-table;
+}
+#State {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: large;
+	font-style: italic;
+}
+#Sports {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: large;
+	font-style: italic;
+}
+#Team {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	font-size: large;
+	font-style: italic;
+}
+#Submit {
+	text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Simple Login Form</title>
+<meta charset="UTF-8" />
+<meta name="Designer" content="PremiumPixels.com">
+<meta name="Author" content="$hekh@r d-Ziner, CSSJUNTION.com">
+<link rel="stylesheet" type="text/css" href="css/name.css">
+<link rel="stylesheet" type="text/css" href="css/structure.css">
+<link rel="stylesheet" type="text/css" href="css/zebra_dialog.css">
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript"
+	src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript" src="script/test.js"></script>
+<script type="text/javascript" src="script/zebra_dialog.js"></script>
+
+<script type="text/javascript">
+function activate()
+{
+	document.getElementById('TeamText').disabled=false;
+}
+function storedata()
+{
+	 // Check for LocalStorage support.
+	  if (localStorage) {
+
+	    // Add an event listener for form submissions
+	    document.getElementById('sportForm').addEventListener('submit', function() {
+	      // Get the value of the name field.
+	      var name = document.getElementById('userID').value;
+
+	      // Save the name in localStorage.
+	      localStorage.setItem('UserID', name);
+	    });
+
+	  }
+}
+
+</script>
+
+</head>
+
+<body onload="initialize()">
+<form class="box login" id="sportForm" action="Teaminfo.jsp" method="Get" onsubmit="storedata()">
+	<fieldset class="boxBody">
+	  <label>Country</label>
+	  <input type="text"  name="CountryText" tabindex="1" placeholder="PremiumPixel" required>
+	  <label>State</label>
+	  <input type="text" name="StateText" tabindex="2" required>
+	  <label>User ID</label>
+	  <input type="text" name="userID" tabindex="1" placeholder="PremiumPixel" required>
+	  <label>Sport</label>
+	  <input type="text"  name="SportText" tabindex="2" required>
+	  <label>League</label>
+	  <input type="text" tabindex="1" name="Leaguetext" placeholder="PremiumPixel" required>
+	  <label>Team</label>
+	 	<select id="TeamText"  tabindex="2" name="Teams" form="sportForm"></select>
+	</fieldset>
+	<footer>
+	  <label><input type="checkbox" tabindex="3">Save Registration</label>
+	  <input type="submit" class="btnLogin" value="Sign UP" tabindex="4">
+	</footer>
+</form>
+<footer id="main">
+
+</footer>
+</body>
+</html>

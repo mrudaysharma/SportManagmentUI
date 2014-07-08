@@ -1,0 +1,21 @@
+<TV>
+
+	<sport>
+		<name>Football</name>
+		<UID>3d2de52f-4f52-4f94-b938-0f8dff5ad01b</UID>
+	</sport>
+	<Event>
+		<League>FIFA WM 2014</League>
+		<Team1>USA</Team1>
+		<Team2>Germany</Team2>
+		<starttime>10:00</starttime>
+		<endtime>11:50</endtime>
+	</Event>
+	<Event>
+		<League>FIFA WM 2014</League>
+		<Team1>Portugal</Team1>
+		<Team2>Ghana</Team2>
+		<starttime>2:00</starttime>
+		<endtime>2:50</endtime>
+	</Event>
+</TV>
